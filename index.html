@@ -14,20 +14,13 @@
 				<h1>WorkPress</h1>
 				<p>Projects start guide for wordpress</p>
 			</header>
-			<section class="works">
-				<ul ng-init="works = [
-				{work:'index.php'},
-				{work:'style.css'},
-				{work:'header.php'},
-				{work:'footer.php'},
-				{work:'single.php'},
-				{work:'page.php'},
-				{work:'404.php'},
-				{work:'Código Analytics'}
-				]">
+			<section class="works" ng-init="works = ['index.php', 'style.css', 'single.php', 'page.php', '404.php'];">
+				<input type="text" placeholder="Add a task to the project" ng-model="task">
+				<button ng-click="works.push(task); task = '';">Add</button>
+				<ul>
 					<li ng-repeat="wk in works" class="work {{check}}">
 						<input type="checkbox" id="check{{$index + 1}}" ng-model="check" ng-true-value="check">
-						<label for="check{{$index + 1}}"> {{wk.work}}</label>
+						<label for="check{{$index + 1}}"> {{wk}}</label>
 					</li>
 				</ul>
 			</section>
