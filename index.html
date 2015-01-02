@@ -12,10 +12,10 @@
 		<div class="container">
 			<header class="header">
 				<h1>WorkPress</h1>
-				<p>Projects start guide for wordpress</p>
+				<p>Checklist for WordPress projects, this is a list of files that you need to build a theme.</p>
 			</header>
 			<section class="works" ng-init="works = ['index.php', 'style.css', 'header.php', 'footer.php', 'sidebar.php', 'home.php', 'archive.php', '404.php', 'search.php', 'date.php', 'author.php', 'category.php', 'tag.php', 'taxonomy.php', 'single.php', 'page.php'];">
-				<input type="text" placeholder="Add a task to the project" ng-model="task">
+				<input type="text" placeholder="Add a file to the project. Example: page-contact.php" ng-model="task">
 				<button ng-click="works.push(task); task = '';">Add</button>
 				<ul>
 					<li ng-repeat="wk in works" class="work {{check}}">
@@ -24,8 +24,10 @@
 					</li>
 				</ul>
 			</section>
-			<footer class="footer">Site made with AngularJS<br>
-			Developed by the team <a href="http://orange612.com/" target="blank">Orange612</a></footer>
+			<footer class="footer">
+				<p>Site made with AngularJS - <a href="https://github.com/orange612/WorkPress">GitHub repository</a>.<br>
+				Developed by the team <a href="http://orange612.com/" target="blank">Orange612</a></p>
+			</footer>
 		</div>
 	</div>
 </body>

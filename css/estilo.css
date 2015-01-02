@@ -1,7 +1,8 @@
 body {
   background: #EEE;
   font-size: 100%;
-  color: #333; }
+  color: #333;
+  line-height: 24px; }
 
 .container {
   max-width: 500px;
@@ -12,7 +13,8 @@ body {
   padding: 15px 20px; }
 
 h1 {
-  margin: 10px; }
+  margin: 20px 0;
+  text-align: center; }
 
 .header {
   margin-bottom: 25px; }
