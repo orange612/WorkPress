@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es" ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>WorkPress</title>
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/estilo.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		<div class="container">
+			<header class="header">
+				<h1>WorkPress</h1>
+				<p>Projects start guide for wordpress</p>
+			</header>
+			<section class="works">
+				<ul ng-init="works = [
+				{work:'index.php'},
+				{work:'style.css'},
+				{work:'header.php'},
+				{work:'footer.php'},
+				{work:'single.php'},
+				{work:'page.php'},
+				{work:'404.php'},
+				{work:'Código Analytics'}
+				]">
+					<li ng-repeat="wk in works" class="work {{check}}">
+						<input type="checkbox" id="check{{$index + 1}}" ng-model="check" ng-true-value="check">
+						<label for="check{{$index + 1}}"> {{wk.work}}</label>
+					</li>
+				</ul>
+			</section>
+			<footer class="footer">Developer by Orange612</footer>
+		</div>
+	</div>
+</body>
+</html>
